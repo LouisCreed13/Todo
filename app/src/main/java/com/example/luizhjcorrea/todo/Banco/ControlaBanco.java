@@ -29,16 +29,21 @@ public class ControlaBanco {
 
         if (resultado == -1) {
 
-            return "Erro ao inseir dado";
+            return "Erro ao inserir dado";
         }
+
 
         else{
             return "Dado inserido com sucesso";
         }
-    }
+
+
+        }
+
+
     public Cursor carregaDados(){
         Cursor cursor;
-        String [] campos = {"_id", "titulo"};
+        String [] campos = {"_id", "nome"};
         db = banco.getReadableDatabase();
         cursor = db.query("tarefa", campos, null, null,null,null,null);
 
